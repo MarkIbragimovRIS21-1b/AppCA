@@ -11,7 +11,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand">
-        <img src="components/assets/logo.png" alt="Caelestis Ant" class="logo">
+        <img src="images/logo.png" alt="Caelestis Ant" class="logo">
         <span class="brand-title">Caelestis Ant</span>
       </a>
       <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
@@ -25,7 +25,7 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
       <div class="mobile-menu-header">
-        <img src="components/assets/logo.png" alt="Caelestis Ant" class="mobile-logo">
+        <img src="images/logo.png" alt="Caelestis Ant" class="mobile-logo">
         <button class="mobile-menu-close" id="menuClose" aria-label="Close menu">&times;</button>
       </div>
       <h2 class="mobile-menu-title">Навигация</h2>
@@ -68,7 +68,7 @@
       <!-- Header Section -->
       <header class="header">
         <div class="hero-logo-circle">
-          <img src="components/assets/logo.png" alt="Caelestis Ant">
+          <img src="images/logo.png" alt="Caelestis Ant">
         </div>
       </header>
       
@@ -121,6 +121,15 @@
     </section>
   </main>
 
-  <script src="js/main.js"></script>
+  <script>
+  document.getElementById('menuToggle').onclick = function() {
+    document.getElementById('mobileMenu').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
+  document.getElementById('menuClose').onclick = function() {
+    document.getElementById('mobileMenu').classList.remove('active');
+    document.body.style.overflow = '';
+  };
+</script>
 </body>
 </html>

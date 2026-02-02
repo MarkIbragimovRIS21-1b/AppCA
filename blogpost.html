@@ -11,7 +11,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand">
-        <img src="components/assets/logo.png" alt="Caelestis Ant" class="logo">
+        <img src="images/logo.png" alt="Caelestis Ant" class="logo">
         <span class="brand-title">Caelestis Ant</span>
       </a>
       <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
@@ -25,7 +25,7 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
       <div class="mobile-menu-header">
-        <img src="components/assets/logo.png" alt="Caelestis Ant" class="mobile-logo">
+        <img src="images/logo.png" alt="Caelestis Ant" class="mobile-logo">
         <button class="mobile-menu-close" id="menuClose" aria-label="Close menu">&times;</button>
       </div>
       <h2 class="mobile-menu-title">Навигация</h2>
@@ -48,31 +48,26 @@
     </section>
   </main>
 
-  <script src="js/main.js"></script>
   <script>
-    // Get post ID from URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const postId = urlParams.get('id') || '1';
-    
-    const posts = {
-      '1': {
-        title: 'Как правильно выбрать первый формикарий',
-        content: 'Подробное руководство для начинающих мирмекологов по выбору и установке своей первой муравьиной колонии. Рассматриваем типы формикариев, материалы и критерии выбора. При выборе формикария важно учитывать размер колонии, вид муравьёв и ваш бюджет. Начинающим рекомендуется выбирать акриловые или гипсовые формикарии, которые легко обслуживать и наблюдать за колонией.'
-      },
-      '2': {
-        title: 'Виды муравьёв для домашнего содержания',
-        content: 'Обзор самых популярных видов муравьёв, которые подходят для содержания в формикариях. От неприхотливых Lasius Niger до экзотических тропических видов. Lasius Niger - идеальный выбор для начинающих благодаря своей неприхотливости и активности. Messor Structor интересны тем, что собирают и хранят семена.'
-      },
-      '3': {
-        title: 'Правильное кормление муравьиной колонии',
-        content: 'Всё о питании муравьёв: что можно давать, как часто кормить и каких ошибок нужно избегать. Создаём сбалансированный рацион для здоровой колонии. Муравьям необходимы белки (насекомые, яичный белок) и углеводы (сахарный сироп, мёд). Важно не перекармливать колонию и убирать остатки пищи.'
-      }
-    };
-    
-    const post = posts[postId] || posts['1'];
-    document.getElementById('postTitle').textContent = post.title;
-    document.getElementById('postContent').textContent = post.content;
-    document.title = 'Caelestis Ant - ' + post.title;
-  </script>
+  document.getElementById('menuToggle').onclick = function() {
+    document.getElementById('mobileMenu').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
+  document.getElementById('menuClose').onclick = function() {
+    document.getElementById('mobileMenu').classList.remove('active');
+    document.body.style.overflow = '';
+  };
+  var urlParams = new URLSearchParams(window.location.search);
+  var postId = urlParams.get('id') || '1';
+  var posts = {
+    '1': { title: 'Как правильно выбрать первый формикарий', content: 'Подробное руководство для начинающих мирмекологов по выбору и установке своей первой муравьиной колонии. Рассматриваем типы формикариев, материалы и критерии выбора. При выборе формикария важно учитывать размер колонии, вид муравьёв и ваш бюджет. Начинающим рекомендуется выбирать акриловые или гипсовые формикарии, которые легко обслуживать и наблюдать за колонией.' },
+    '2': { title: 'Виды муравьёв для домашнего содержания', content: 'Обзор самых популярных видов муравьёв, которые подходят для содержания в формикариях. От неприхотливых Lasius Niger до экзотических тропических видов. Lasius Niger - идеальный выбор для начинающих благодаря своей неприхотливости и активности. Messor Structor интересны тем, что собирают и хранят семена.' },
+    '3': { title: 'Правильное кормление муравьиной колонии', content: 'Всё о питании муравьёв: что можно давать, как часто кормить и каких ошибок нужно избегать. Создаём сбалансированный рацион для здоровой колонии. Муравьям необходимы белки (насекомые, яичный белок) и углеводы (сахарный сироп, мёд). Важно не перекармливать колонию и убирать остатки пищи.' }
+  };
+  var post = posts[postId] || posts['1'];
+  document.getElementById('postTitle').textContent = post.title;
+  document.getElementById('postContent').textContent = post.content;
+  document.title = 'Caelestis Ant - ' + post.title;
+</script>
 </body>
 </html>
