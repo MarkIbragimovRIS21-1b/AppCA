@@ -1,0 +1,4 @@
+.catalog h2{margin-bottom:12px}
+.grid{display:grid;grid-template-columns:1fr;gap:12px}
+.item .thumb{height:160px;background:linear-gradient(90deg,var(--color-primary),var(--color-accent));border-radius:8px;margin-bottom:8px;display:flex;align-items:center;justify-content:center;color:#021018;font-weight:700}
+@media(min-width:720px){ .grid{grid-template-columns:repeat(3,1fr)} }

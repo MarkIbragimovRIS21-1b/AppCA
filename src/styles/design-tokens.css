@@ -1,0 +1,19 @@
+:root {
+  /* Updated color scheme to match purple/lavender mockup design */
+  --color-primary: #9b93c7;
+  --color-primary-dark: #7b74a7;
+  --color-secondary: #fff8e6;
+  --color-text-dark: #2d1f4a;
+  --color-text-muted: #6b5d8a;
+  --color-bg-cream: #fff8e6;
+  --color-white: #ffffff;
+  --color-accent-purple: #8b82b8;
+  --radius-md: 20px;
+  --radius-lg: 32px;
+
+  --anim-duration-fast: 180ms;
+  --anim-duration-medium: 350ms;
+  --anim-duration-slow: 550ms;
+  --easing-standard: cubic-bezier(0.2, 0.9, 0.2, 1);
+  --easing-entrance: cubic-bezier(0.22, 0.9, 0.35, 1);
+}
