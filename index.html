@@ -1,12 +1,135 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>AppCA — Caelestis Ant web app</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="src/index.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caelestis Ant - Главная</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="Caelestis Ant" class="logo">
+        <span class="brand-title">Caelestis Ant</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+      <nav class="nav">
+        <a href="index.html" class="nav-link active">Главная</a>
+        <a href="blog.html" class="nav-link">Блог</a>
+        <a href="about.html" class="nav-link">О нас</a>
+      </nav>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-header">
+        <img src="images/logo.png" alt="Caelestis Ant" class="mobile-logo">
+        <button class="mobile-menu-close" id="menuClose" aria-label="Close menu">&times;</button>
+      </div>
+      <h2 class="mobile-menu-title">Навигация</h2>
+      <nav class="mobile-nav">
+        <a href="index.html" class="mobile-nav-button">Главная</a>
+        <a href="blog.html" class="mobile-nav-button">Блог</a>
+        <a href="about.html" class="mobile-nav-button">О нас</a>
+      </nav>
+      <div class="mobile-menu-footer">
+        <h3>Почему выбирают наш сайт</h3>
+        <ul class="mobile-features">
+          <li>Более 6 лет опыта в мирмекиперстве</li>
+          <li>Качественные товары от проверенных производителей</li>
+          <li>Профессиональные консультации и поддержка</li>
+        </ul>
+        <h3>Мир мирмекиперства ждет вас!</h3>
+        <p>Откройте для себя удивительный мир содержания муравьев. У нас вы найдете все необходимое для ваших питомцев.</p>
+        <div class="mobile-promo">
+          <div class="promo-icon">&#127968;</div>
+          <h4>Формикарии премиум-класса</h4>
+          <p>Муравьиные фермы с применением уникальных технологий</p>
+        </div>
+        <div class="mobile-promo">
+          <div class="promo-icon">&#128028;</div>
+          <h4>Редкие виды муравьев</h4>
+          <p>Широкий выбор маток различных видов</p>
+        </div>
+        <div class="mobile-promo">
+          <div class="promo-icon">&#128218;</div>
+          <h4>Экспертная поддержка</h4>
+          <p>Мы готовы дать советы по содержанию муравьев</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="app-container">
+    <section class="home container">
+      <!-- Header Section -->
+      <header class="header">
+        <div class="hero-logo-circle">
+          <img src="images/logo.png" alt="Caelestis Ant">
+        </div>
+      </header>
+      
+      <!-- Hero Content -->
+      <div class="hero-content card">
+        <h1>Муравьи как домашние питомцы</h1>
+        <p>Вас приветствует команда Caelestis Ant, мы занимаемся мирмекиперством (содержанием муравьёв) уже более 6 лет, имеем большой опыт содержания разных видов. Здесь вас ждут:</p>
+        <ul class="hero-features">
+          <li>Блоги о колониях!</li>
+          <li>Наши фирменные линейки формикариев и декор!</li>
+          <li>Различные виды муравьев!</li>
+        </ul>
+      </div>
+      
+      <!-- Why Choose Us Section -->
+      <div class="why-choose">
+        <h2>Почему выбирают нас</h2>
+        <p class="why-choose-intro">Наши конкурентные преимущества делают нас лидерами в области создания идеальных условий для муравьиных колоний</p>
+        <div class="features">
+          <article class="feature card">
+            <div class="feature-icon">&#128737;</div>
+            <div class="feature-content">
+              <h3>Безопасность и качество</h3>
+              <p>Наши формикарии изготовлены из экологически чистых материалов высшего качества. Каждый продукт проходит тщательную проверку перед отправкой покупателю.</p>
+            </div>
+          </article>
+          <article class="feature card">
+            <div class="feature-icon">&#9889;</div>
+            <div class="feature-content">
+              <h3>Инновационные технологии</h3>
+              <p>Мы используем передовые разработки в области мирмекологии. Уникальные системы вентиляции и увлажнения обеспечивают идеальные условия для жизни муравьиных колоний.</p>
+            </div>
+          </article>
+          <article class="feature card">
+            <div class="feature-icon">&#128154;</div>
+            <div class="feature-content">
+              <h3>Забота о муравьях</h3>
+              <p>Все наши решения разработаны с учётом естественных потребностей муравьёв. Мы создаём оптимальные условия для роста и развития колоний.</p>
+            </div>
+          </article>
+          <article class="feature card">
+            <div class="feature-icon">&#128222;</div>
+            <div class="feature-content">
+              <h3>Экспертная поддержка</h3>
+              <p>Наша команда состоит из опытных мирмекологов, готовых помочь как начинающим, так и опытным любителям муравьев. Консультации и рекомендации по содержанию.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+  document.getElementById('menuToggle').onclick = function() {
+    document.getElementById('mobileMenu').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
+  document.getElementById('menuClose').onclick = function() {
+    document.getElementById('mobileMenu').classList.remove('active');
+    document.body.style.overflow = '';
+  };
+</script>
+</body>
 </html>

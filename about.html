@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caelestis Ant - О нас</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="Caelestis Ant" class="logo">
+        <span class="brand-title">Caelestis Ant</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="blog.html" class="nav-link">Блог</a>
+        <a href="about.html" class="nav-link active">О нас</a>
+      </nav>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-header">
+        <img src="images/logo.png" alt="Caelestis Ant" class="mobile-logo">
+        <button class="mobile-menu-close" id="menuClose" aria-label="Close menu">&times;</button>
+      </div>
+      <h2 class="mobile-menu-title">Навигация</h2>
+      <nav class="mobile-nav">
+        <a href="index.html" class="mobile-nav-button">Главная</a>
+        <a href="blog.html" class="mobile-nav-button">Блог</a>
+        <a href="about.html" class="mobile-nav-button">О нас</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="app-container">
+    <section class="about container">
+      <h2 class="about-title">О нас</h2>
+      
+      <!-- Main description block -->
+      <div class="about-description card">
+        <p>Текст о компании будет добавлен позже...</p>
+      </div>
+      
+      <!-- Social media blocks -->
+      <div class="social-blocks">
+        <a href="https://vk.com" target="_blank" rel="noopener noreferrer" class="social-card card">
+          <img src="images/vk-icon.svg" alt="VK" class="social-icon-img">
+          <h3>Мы в ВКонтакте</h3>
+        </a>
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-card card">
+          <img src="images/youtube-icon.svg" alt="YouTube" class="social-icon-img">
+          <h3>Мы на YouTube</h3>
+        </a>
+        <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" class="social-card card">
+          <img src="images/telegram-icon.svg" alt="Telegram" class="social-icon-img">
+          <h3>Мы в Telegram</h3>
+        </a>
+      </div>
+      
+      <!-- Additional text block -->
+      <div class="about-text card">
+        <p>Дополнительная информация о компании и нашей деятельности...</p>
+      </div>
+      
+      <!-- Contact information -->
+      <div class="contact-info card">
+        <h3>Контакты</h3>
+        <p class="contact-item"><strong>Компания располагается по адресу:</strong> место для адреса</p>
+        <p class="contact-item"><strong>Телефон:</strong> место для телефона</p>
+        <p class="contact-item"><strong>Email:</strong> место для почты</p>
+      </div>
+      
+      <!-- Foundation support block -->
+      <div class="foundation-block card">
+        <div class="foundation-logo">
+          <img src="images/fond-logo.png" alt="Фонд содействия инновациям">
+        </div>
+        <p class="foundation-text">Данный сайт сделан при поддержке фонда содействия инновациям</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+  document.getElementById('menuToggle').onclick = function() {
+    document.getElementById('mobileMenu').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
+  document.getElementById('menuClose').onclick = function() {
+    document.getElementById('mobileMenu').classList.remove('active');
+    document.body.style.overflow = '';
+  };
+</script>
+</body>
+</html>

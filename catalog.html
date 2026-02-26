@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caelestis Ant - Каталог</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="Caelestis Ant" class="logo">
+        <span class="brand-title">Caelestis Ant</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="blog.html" class="nav-link">Блог</a>
+        <a href="about.html" class="nav-link">О нас</a>
+      </nav>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-header">
+        <img src="images/logo.png" alt="Caelestis Ant" class="mobile-logo">
+        <button class="mobile-menu-close" id="menuClose" aria-label="Close menu">&times;</button>
+      </div>
+      <h2 class="mobile-menu-title">Навигация</h2>
+      <nav class="mobile-nav">
+        <a href="index.html" class="mobile-nav-button">Главная</a>
+        <a href="blog.html" class="mobile-nav-button">Блог</a>
+        <a href="about.html" class="mobile-nav-button">О нас</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="app-container">
+    <section class="catalog container">
+      <h2>Каталог</h2>
+      <div class="grid">
+        <article class="card item">
+          <div class="thumb">Фото</div>
+          <h3>Формикарий 1</h3>
+          <p>29 USD</p>
+          <a href="product.html?id=1" class="btn">Подробнее</a>
+        </article>
+        <article class="card item">
+          <div class="thumb">Фото</div>
+          <h3>Формикарий 2</h3>
+          <p>34 USD</p>
+          <a href="product.html?id=2" class="btn">Подробнее</a>
+        </article>
+        <article class="card item">
+          <div class="thumb">Фото</div>
+          <h3>Формикарий 3</h3>
+          <p>39 USD</p>
+          <a href="product.html?id=3" class="btn">Подробнее</a>
+        </article>
+        <article class="card item">
+          <div class="thumb">Фото</div>
+          <h3>Формикарий 4</h3>
+          <p>44 USD</p>
+          <a href="product.html?id=4" class="btn">Подробнее</a>
+        </article>
+        <article class="card item">
+          <div class="thumb">Фото</div>
+          <h3>Формикарий 5</h3>
+          <p>49 USD</p>
+          <a href="product.html?id=5" class="btn">Подробнее</a>
+        </article>
+        <article class="card item">
+          <div class="thumb">Фото</div>
+          <h3>Формикарий 6</h3>
+          <p>54 USD</p>
+          <a href="product.html?id=6" class="btn">Подробнее</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script>
+  document.getElementById('menuToggle').onclick = function() {
+    document.getElementById('mobileMenu').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
+  document.getElementById('menuClose').onclick = function() {
+    document.getElementById('mobileMenu').classList.remove('active');
+    document.body.style.overflow = '';
+  };
+</script>
+</body>
+</html>

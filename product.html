@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caelestis Ant - Продукт</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="Caelestis Ant" class="logo">
+        <span class="brand-title">Caelestis Ant</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="blog.html" class="nav-link">Блог</a>
+        <a href="about.html" class="nav-link">О нас</a>
+      </nav>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-header">
+        <img src="images/logo.png" alt="Caelestis Ant" class="mobile-logo">
+        <button class="mobile-menu-close" id="menuClose" aria-label="Close menu">&times;</button>
+      </div>
+      <h2 class="mobile-menu-title">Навигация</h2>
+      <nav class="mobile-nav">
+        <a href="index.html" class="mobile-nav-button">Главная</a>
+        <a href="blog.html" class="mobile-nav-button">Блог</a>
+        <a href="about.html" class="mobile-nav-button">О нас</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="app-container">
+    <section class="product container">
+      <a href="catalog.html" class="back">&larr; Назад</a>
+      <div class="product-grid card">
+        <div class="img-col">Фото</div>
+        <div class="info-col">
+          <h2 id="productTitle">Формикарий</h2>
+          <p>Детальное описание продукта.</p>
+          <div class="actions">
+            <button class="btn primary">Купить</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+  document.getElementById('menuToggle').onclick = function() {
+    document.getElementById('mobileMenu').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
+  document.getElementById('menuClose').onclick = function() {
+    document.getElementById('mobileMenu').classList.remove('active');
+    document.body.style.overflow = '';
+  };
+  var urlParams = new URLSearchParams(window.location.search);
+  var productId = urlParams.get('id') || '1';
+  document.getElementById('productTitle').textContent = 'Формикарий ' + productId;
+  document.title = 'Caelestis Ant - Формикарий ' + productId;
+</script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caelestis Ant - Блог</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="Caelestis Ant" class="logo">
+        <span class="brand-title">Caelestis Ant</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="blog.html" class="nav-link active">Блог</a>
+        <a href="about.html" class="nav-link">О нас</a>
+      </nav>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-header">
+        <img src="images/logo.png" alt="Caelestis Ant" class="mobile-logo">
+        <button class="mobile-menu-close" id="menuClose" aria-label="Close menu">&times;</button>
+      </div>
+      <h2 class="mobile-menu-title">Навигация</h2>
+      <nav class="mobile-nav">
+        <a href="index.html" class="mobile-nav-button">Главная</a>
+        <a href="blog.html" class="mobile-nav-button">Блог</a>
+        <a href="about.html" class="mobile-nav-button">О нас</a>
+      </nav>
+      <div class="mobile-menu-footer">
+        <h3>Почему выбирают наш сайт</h3>
+        <ul class="mobile-features">
+          <li>Более 6 лет опыта в мирмекиперстве</li>
+          <li>Качественные товары от проверенных производителей</li>
+          <li>Профессиональные консультации и поддержка</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="app-container">
+    <section class="blog container">
+      <h2>Блог о мирмекологии</h2>
+      <p class="blog-intro">Погрузитесь в удивительный мир муравьёв с нашими экспертными статьями и видеоматериалами. Изучайте, учитесь и совершенствуйте свои навыки в содержании муравьиных колоний.</p>
+      
+      <div class="posts">
+        <article class="card post">
+          <img src="images/ant-colony-formicarium.png" alt="Как правильно выбрать первый формикарий" class="post-image">
+          <div class="post-content">
+            <div class="post-category">Для начинающих</div>
+            <h3>Как правильно выбрать первый формикарий</h3>
+            <p>Подробное руководство для начинающих мирмекологов по выбору и установке своей первой муравьиной колонии. Рассматриваем типы формикариев, материалы и критерии выбора.</p>
+            <a href="blogpost.html?id=1" class="link-more">Смотреть</a>
+          </div>
+        </article>
+        
+        <article class="card post">
+          <img src="images/ant-colony-formicarium.png" alt="Виды муравьёв для домашнего содержания" class="post-image">
+          <div class="post-content">
+            <div class="post-category">Виды муравьёв</div>
+            <h3>Виды муравьёв для домашнего содержания</h3>
+            <p>Обзор самых популярных видов муравьёв, которые подходят для содержания в формикариях. От неприхотливых Lasius Niger до экзотических тропических видов.</p>
+            <a href="blogpost.html?id=2" class="link-more">Смотреть</a>
+          </div>
+        </article>
+        
+        <article class="card post">
+          <img src="images/ant-colony-formicarium.png" alt="Правильное кормление муравьиной колонии" class="post-image">
+          <div class="post-content">
+            <div class="post-category">Уход</div>
+            <h3>Правильное кормление муравьиной колонии</h3>
+            <p>Всё о питании муравьёв: что можно давать, как часто кормить и каких ошибок нужно избегать. Создаём сбалансированный рацион для здоровой колонии.</p>
+            <a href="blogpost.html?id=3" class="link-more">Смотреть</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script>
+  document.getElementById('menuToggle').onclick = function() {
+    document.getElementById('mobileMenu').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
+  document.getElementById('menuClose').onclick = function() {
+    document.getElementById('mobileMenu').classList.remove('active');
+    document.body.style.overflow = '';
+  };
+</script>
+</body>
+</html>
