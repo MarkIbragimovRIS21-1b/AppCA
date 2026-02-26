@@ -1,3 +1,4 @@
 {
-  "outputDirectory": "."
+  "buildCommand": "mkdir -p public && cp -r images css *.html public/",
+  "outputDirectory": "public"
 }
